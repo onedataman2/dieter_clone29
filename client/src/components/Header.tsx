@@ -22,7 +22,7 @@ export function Header({ categories = [] }: HeaderProps) {
   const cats = categories.length > 0 ? categories : defaultCategories;
 
   return (
-    <header className="sticky top-0 z-50 bg-white border-b-2 border-dashed border-primary">
+    <header className="sticky top-0 z-50 bg-white border-b border-border">
       <div className="container">
         {/* Top bar */}
         <div className="flex items-center justify-between h-16">
@@ -86,7 +86,7 @@ export function Header({ categories = [] }: HeaderProps) {
         </div>
 
         {/* Category Filter */}
-        <div className="border-t-2 border-dashed border-primary py-4 overflow-x-auto">
+        <div className="border-t border-border py-4 overflow-x-auto">
           <div className="flex gap-3 pb-2">
             {cats.map((cat, idx) => (
               <button
@@ -105,7 +105,7 @@ export function Header({ categories = [] }: HeaderProps) {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <nav className="md:hidden pb-4 border-t-2 border-dashed border-primary">
+          <nav className="md:hidden pb-4 border-t border-border">
             <a
               href="#"
               className="block py-2 text-sm font-semibold text-foreground hover:text-primary transition-colors"

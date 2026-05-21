@@ -44,22 +44,22 @@
 
 :root {
   /* Framer Dieter Design System: Playful Modern E-commerce */
-  /* Primary: Bright Lime Green */
-  --primary: #00ff00;
-  --primary-foreground: #000000;
-  --sidebar-primary: #00ff00;
-  --sidebar-primary-foreground: #000000;
+  /* Primary: Bright Orange */
+  --primary: #ff8c00;
+  --primary-foreground: #ffffff;
+  --sidebar-primary: #ff8c00;
+  --sidebar-primary-foreground: #ffffff;
   
   /* Secondary: Coral/Bright Red */
   --secondary: #ff4444;
   --secondary-foreground: #ffffff;
   
-  /* Chart colors: Green gradient */
-  --chart-1: #ccffcc;
-  --chart-2: #99ff99;
-  --chart-3: #66ff66;
-  --chart-4: #00ff00;
-  --chart-5: #00cc00;
+  /* Chart colors: Orange gradient */
+  --chart-1: #ffe4cc;
+  --chart-2: #ffd4a3;
+  --chart-3: #ffc480;
+  --chart-4: #ff8c00;
+  --chart-5: #e67e00;
   
   /* Spacing and radius: Minimal */
   --radius: 0.25rem;
@@ -84,25 +84,25 @@
   --destructive: #ff4444;
   --destructive-foreground: #ffffff;
   
-  /* Border: Dashed green */
-  --border: #00ff00;
+  /* Border: Light gray (no dashed) */
+  --border: #e5e5e5;
   --input: #f5f5f5;
-  --ring: #00ff00;
+  --ring: #ff8c00;
   
   /* Sidebar */
   --sidebar: #ffffff;
   --sidebar-foreground: #000000;
   --sidebar-accent: #f5f5f5;
   --sidebar-accent-foreground: #000000;
-  --sidebar-border: #00ff00;
-  --sidebar-ring: #00ff00;
+  --sidebar-border: #e5e5e5;
+  --sidebar-ring: #ff8c00;
 }
 
 .dark {
-  --primary: #00ff00;
-  --primary-foreground: #000000;
-  --sidebar-primary: #00ff00;
-  --sidebar-primary-foreground: #000000;
+  --primary: #ff8c00;
+  --primary-foreground: #ffffff;
+  --sidebar-primary: #ff8c00;
+  --sidebar-primary-foreground: #ffffff;
   --background: #0a0a0a;
   --foreground: #ffffff;
   --card: #1a1a1a;
@@ -117,20 +117,20 @@
   --accent-foreground: #ffffff;
   --destructive: #ff4444;
   --destructive-foreground: #ffffff;
-  --border: #00ff00;
+  --border: #333333;
   --input: #1a1a1a;
-  --ring: #00ff00;
-  --chart-1: #ccffcc;
-  --chart-2: #99ff99;
-  --chart-3: #66ff66;
-  --chart-4: #00ff00;
-  --chart-5: #00cc00;
+  --ring: #ff8c00;
+  --chart-1: #ffe4cc;
+  --chart-2: #ffd4a3;
+  --chart-3: #ffc480;
+  --chart-4: #ff8c00;
+  --chart-5: #e67e00;
   --sidebar: #1a1a1a;
   --sidebar-foreground: #ffffff;
   --sidebar-accent: #333333;
   --sidebar-accent-foreground: #ffffff;
-  --sidebar-border: #00ff00;
-  --sidebar-ring: #00ff00;
+  --sidebar-border: #333333;
+  --sidebar-ring: #ff8c00;
 }
 
 @layer base {
@@ -205,7 +205,7 @@
   
   /* Framer-specific component styles */
   .product-card {
-    @apply bg-white border-2 border-dashed border-primary rounded-none overflow-hidden transition-all duration-200 hover:shadow-lg hover:scale-105;
+    @apply bg-white border border-border rounded-lg overflow-hidden transition-all duration-200 hover:shadow-lg hover:scale-105;
   }
   
   .status-badge {

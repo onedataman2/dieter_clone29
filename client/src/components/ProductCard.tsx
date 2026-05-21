@@ -34,7 +34,7 @@ export function ProductCard({
   const config = statusConfig[status];
 
   return (
-    <div className="product-card flex flex-col h-full bg-white border-2 border-dashed border-primary">
+    <div className="product-card flex flex-col h-full">
       {/* Image container */}
       <div className="relative bg-muted overflow-hidden aspect-square flex items-center justify-center">
         <img
