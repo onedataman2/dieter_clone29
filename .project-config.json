@@ -1,0 +1,35 @@
+{
+  "build_command": "pnpm run build",
+  "capabilities": [],
+  "dev_command": "pnpm run dev",
+  "env_vars": {},
+  "experiments": null,
+  "git_remote": {
+    "repo_url": "s3://vida-prod-gitrepo/webdev-git/310519663034607010/GBWXKzp7YHz5KEoCdna3x8",
+    "access_key_id": "ASIAZV3A2ECZGJAP3NEM",
+    "secret_access_key": "N85p7cDklsCIbEcCp94aZK9S+h231ExXsX99Rn0y",
+    "session_token": "IQoJb3JpZ2luX2VjED8aCXVzLWVhc3QtMSJHMEUCIDhxPm2jzbdb3ObR453q6zpLPtAFqbpQp2gbZTUbR0y4AiEA3JJ2UiriK2K/k2aUIFMKGqpmK/nkYxH14kLxfVRi2BMq9gMIBxAEGgw2NjUzODYwOTg4NjYiDKCdLufCrdAk++vb5irTAz9oNacqYjoksThqV+/9oin15ZftYIa9WJEYsYqJ//ccmUnwsa3la6CeqRcBMslHN71j9wywsxa5iiIb1yke76rkRjhbfW75iD5qyxqVA3sL/xmuzcK19C8VEwtWgDXhD1+wTMEEoIcjjq7f02iLCZvcySRjc/J+sHL1upQkHFw4vLReB+QvoAeyvmscnp7vC2zyUecUA70xGSZocF//lIMbw9K85KZutVWbZAQqWKQdST4NyRi0USJ3PkAWGFWOyp2HoWh4Ck65uJ0pFXfCFZbePnpRPviNtq0SsgY73qW2LkKI1Wd3ISIDwgOQgnT5fMtSyTq50LRnXabOJlTnxTiFoH/if5iLnU+kb/asldU8mDgdVJgEeRfFCq+USaUhLSco48vrA6nnVDofcDKgbk2laqixFoTF0B1KRQ76BJXANA6QYGmiRMCJ15/JaXEMpO0C3nSgjPcMeviRgL50tuEG5Kz1TDFzXwEDPDAcE1zZvDaws4Vf7bdkKHeiqLrqzHq3/CDc8by3WgyT7yVFTwR4mMsWSLGlHMrFvCsqClyZdip93TnrnGeHkCuqXrR0h/gWExLbZwuc8s1RN5TVBiM4DN95T2+uJjrEsH+PQ9e0LuuVMO+jvNAGOp0BHoIsHdUYPE8rCLUBO3EblyDRUo2QC6Jpi2BHu3NeIYidreiQAlFs4u+AONmD8A/6oB8u2kUi/4YalYLxTvblqbJE6vml2CVOEn3vYhKZYt7TWPT8cA+ANVx2hspm+qSxM7e7EkF3xQ2DDVDmzRs1MjVS3WT2Odg0sfALgbiHmn7aUuTqorSQfYSzesPgOQACzTFvkk76My78pLyU+w==",
+    "expiration": "2026-05-22T02:08:47.000Z"
+  },
+  "name": "dieter_clone",
+  "path": "/home/ubuntu/dieter_clone",
+  "port": 3000,
+  "secrets": {
+    "BUILT_IN_FORGE_API_KEY": "YHfi7ss8xwQGQCyRvyaBZt",
+    "BUILT_IN_FORGE_API_URL": "https://forge.manus.ai",
+    "JWT_SECRET": "kCCCmQFAKZSUsXSUbG3fSS",
+    "OAUTH_SERVER_URL": "https://api.manus.im",
+    "OWNER_NAME": "data M",
+    "OWNER_OPEN_ID": "ZGYcwAUsj6fbBJRn3KUYpo",
+    "VITE_ANALYTICS_ENDPOINT": "https://manus-analytics.com",
+    "VITE_ANALYTICS_WEBSITE_ID": "a8943dda-171a-41d1-93eb-a0b066fd2035",
+    "VITE_APP_ID": "GBWXKzp7YHz5KEoCdna3x8",
+    "VITE_APP_LOGO": "",
+    "VITE_APP_TITLE": "Dieter Electronics Store",
+    "VITE_FRONTEND_FORGE_API_KEY": "K5SNLWeJUjhDTMp8qZeRnS",
+    "VITE_FRONTEND_FORGE_API_URL": "https://forge.manus.ai",
+    "VITE_OAUTH_PORTAL_URL": "https://manus.im"
+  },
+  "template_id": "web-static",
+  "test_command": "pnpm test"
+}
