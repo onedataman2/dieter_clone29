@@ -43,94 +43,94 @@
 }
 
 :root {
-  /* Dieter Design System: Modern Minimalist Clarity */
-  /* Primary accent: Emerald green for actions and badges */
-  --primary: #10b981;
-  --primary-foreground: #ffffff;
-  --sidebar-primary: #10b981;
-  --sidebar-primary-foreground: #ffffff;
+  /* Framer Dieter Design System: Playful Modern E-commerce */
+  /* Primary: Bright Lime Green */
+  --primary: #00ff00;
+  --primary-foreground: #000000;
+  --sidebar-primary: #00ff00;
+  --sidebar-primary-foreground: #000000;
   
-  /* Chart colors: Emerald green gradient */
-  --chart-1: #d1fae5;
-  --chart-2: #a7f3d0;
-  --chart-3: #6ee7b7;
-  --chart-4: #10b981;
-  --chart-5: #059669;
+  /* Secondary: Coral/Bright Red */
+  --secondary: #ff4444;
+  --secondary-foreground: #ffffff;
   
-  /* Spacing and radius: Subtle, refined */
-  --radius: 0.5rem;
+  /* Chart colors: Green gradient */
+  --chart-1: #ccffcc;
+  --chart-2: #99ff99;
+  --chart-3: #66ff66;
+  --chart-4: #00ff00;
+  --chart-5: #00cc00;
   
-  /* Light theme: Pure white background with deep charcoal text */
+  /* Spacing and radius: Minimal */
+  --radius: 0.25rem;
+  
+  /* Light theme: Pure white background */
   --background: #ffffff;
-  --foreground: #1f2937;
+  --foreground: #000000;
   --card: #ffffff;
-  --card-foreground: #1f2937;
+  --card-foreground: #000000;
   --popover: #ffffff;
-  --popover-foreground: #1f2937;
+  --popover-foreground: #000000;
   
-  /* Secondary: Light gray for subtle backgrounds */
-  --secondary: #f3f4f6;
-  --secondary-foreground: #374151;
-  
-  /* Muted: Very light gray for borders and dividers */
-  --muted: #e5e7eb;
-  --muted-foreground: #6b7280;
+  /* Muted: Light gray */
+  --muted: #f0f0f0;
+  --muted-foreground: #666666;
   
   /* Accent: Light gray for interactive states */
-  --accent: #f9fafb;
-  --accent-foreground: #111827;
+  --accent: #f5f5f5;
+  --accent-foreground: #000000;
   
-  /* Destructive: Red for warnings/errors */
-  --destructive: #ef4444;
+  /* Destructive: Red for warnings */
+  --destructive: #ff4444;
   --destructive-foreground: #ffffff;
   
-  /* Border and input: Subtle light gray */
-  --border: #e5e7eb;
-  --input: #f3f4f6;
-  --ring: #10b981;
+  /* Border: Dashed green */
+  --border: #00ff00;
+  --input: #f5f5f5;
+  --ring: #00ff00;
   
-  /* Sidebar: Matches main background */
+  /* Sidebar */
   --sidebar: #ffffff;
-  --sidebar-foreground: #1f2937;
-  --sidebar-accent: #f3f4f6;
-  --sidebar-accent-foreground: #1f2937;
-  --sidebar-border: #e5e7eb;
-  --sidebar-ring: #10b981;
+  --sidebar-foreground: #000000;
+  --sidebar-accent: #f5f5f5;
+  --sidebar-accent-foreground: #000000;
+  --sidebar-border: #00ff00;
+  --sidebar-ring: #00ff00;
 }
 
 .dark {
-  --primary: #10b981;
-  --primary-foreground: #ffffff;
-  --sidebar-primary: #10b981;
-  --sidebar-primary-foreground: #ffffff;
-  --background: #0f172a;
-  --foreground: #f1f5f9;
-  --card: #1e293b;
-  --card-foreground: #f1f5f9;
-  --popover: #1e293b;
-  --popover-foreground: #f1f5f9;
-  --secondary: #334155;
-  --secondary-foreground: #e2e8f0;
-  --muted: #475569;
-  --muted-foreground: #cbd5e1;
-  --accent: #1e293b;
-  --accent-foreground: #f1f5f9;
-  --destructive: #f87171;
-  --destructive-foreground: #0f172a;
-  --border: #334155;
-  --input: #1e293b;
-  --ring: #10b981;
-  --chart-1: #d1fae5;
-  --chart-2: #a7f3d0;
-  --chart-3: #6ee7b7;
-  --chart-4: #10b981;
-  --chart-5: #059669;
-  --sidebar: #1e293b;
-  --sidebar-foreground: #f1f5f9;
-  --sidebar-accent: #334155;
-  --sidebar-accent-foreground: #f1f5f9;
-  --sidebar-border: #334155;
-  --sidebar-ring: #10b981;
+  --primary: #00ff00;
+  --primary-foreground: #000000;
+  --sidebar-primary: #00ff00;
+  --sidebar-primary-foreground: #000000;
+  --background: #0a0a0a;
+  --foreground: #ffffff;
+  --card: #1a1a1a;
+  --card-foreground: #ffffff;
+  --popover: #1a1a1a;
+  --popover-foreground: #ffffff;
+  --secondary: #ff4444;
+  --secondary-foreground: #ffffff;
+  --muted: #333333;
+  --muted-foreground: #999999;
+  --accent: #1a1a1a;
+  --accent-foreground: #ffffff;
+  --destructive: #ff4444;
+  --destructive-foreground: #ffffff;
+  --border: #00ff00;
+  --input: #1a1a1a;
+  --ring: #00ff00;
+  --chart-1: #ccffcc;
+  --chart-2: #99ff99;
+  --chart-3: #66ff66;
+  --chart-4: #00ff00;
+  --chart-5: #00cc00;
+  --sidebar: #1a1a1a;
+  --sidebar-foreground: #ffffff;
+  --sidebar-accent: #333333;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #00ff00;
+  --sidebar-ring: #00ff00;
 }
 
 @layer base {
@@ -142,7 +142,7 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -158,7 +158,7 @@
     @apply cursor-pointer;
   }
   
-  /* Typography hierarchy for dieter aesthetic */
+  /* Typography hierarchy */
   h1 {
     @apply text-5xl font-bold tracking-tight;
   }
@@ -172,8 +172,8 @@
 
 @layer components {
   /**
-   * Custom container utility that centers content and adds responsive padding.
-   * Dieter Design: Maintains generous whitespace and clean alignment.
+   * Custom container utility
+   * Framer Design: Maintains responsive spacing
    */
   .container {
     width: 100%;
@@ -199,32 +199,48 @@
     .container {
       padding-left: 2rem;
       padding-right: 2rem;
-      max-width: 1280px;
+      max-width: 1400px;
     }
   }
   
-  /* Dieter-specific component styles */
+  /* Framer-specific component styles */
   .product-card {
-    @apply bg-white border border-border rounded-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105;
+    @apply bg-white border-2 border-dashed border-primary rounded-none overflow-hidden transition-all duration-200 hover:shadow-lg hover:scale-105;
   }
   
   .status-badge {
-    @apply inline-flex items-center gap-1 text-xs font-semibold rounded-full px-3 py-1;
+    @apply inline-flex items-center gap-1 text-xs font-bold rounded-full px-3 py-1;
   }
   
   .status-badge-in-stock {
-    @apply bg-emerald-50 text-emerald-700;
+    @apply bg-primary text-black;
   }
   
   .status-badge-out-of-stock {
-    @apply bg-orange-50 text-orange-700;
+    @apply bg-secondary text-white;
   }
   
   .status-badge-new {
-    @apply bg-blue-50 text-blue-700;
+    @apply bg-primary text-black;
   }
   
-  .section-divider {
-    @apply my-16 border-t border-border;
+  .category-badge {
+    @apply inline-flex items-center justify-center w-8 h-8 rounded-full bg-primary text-black font-bold text-xs;
+  }
+  
+  .masonry-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-auto-rows: auto;
+    gap: 1rem;
+    grid-auto-flow: dense;
+  }
+  
+  .masonry-item-2x {
+    grid-column: span 2;
+  }
+  
+  .masonry-item-2y {
+    grid-row: span 2;
   }
 }

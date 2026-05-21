@@ -1,257 +1,155 @@
 import { Header } from "@/components/Header";
-import { HeroSection } from "@/components/HeroSection";
-import { FeaturesSection } from "@/components/FeaturesSection";
-import { ProductCarousel } from "@/components/ProductCarousel";
-import { BrandShowcase } from "@/components/BrandShowcase";
-import { StaffPicks } from "@/components/StaffPicks";
+import { ProductCard } from "@/components/ProductCard";
 import { Footer } from "@/components/Footer";
 
-// Mock data
-const trendingProducts = [
+// Mock product data matching the Framer design
+const allProducts = [
   {
     id: "1",
-    image: "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=400&h=400&fit=crop",
-    name: "They're Radio F77",
+    image: "https://framerusercontent.com/images/C67lEKfFEQ9Ao4GMknVpRjdQSPo.png",
+    name: "They-re Radio P77",
     price: 179,
     status: "in-stock" as const,
   },
   {
     id: "2",
-    image: "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=400&h=400&fit=crop",
+    image: "https://framerusercontent.com/images/J2eFqmrs2I831EXbJfBQyNaMI.png",
     name: "Radion T28",
     price: 129,
     status: "in-stock" as const,
   },
   {
     id: "3",
-    image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=400&fit=crop",
-    name: "Clock Orange Q2",
+    image: "https://framerusercontent.com/images/dlSQBjwpKaHj9r2I3UFrWjaddak.png",
+    name: "Clock Orange O2",
     price: 399,
     status: "out-of-stock" as const,
   },
   {
     id: "4",
-    image: "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=400&h=400&fit=crop",
+    image: "https://framerusercontent.com/images/mTzSE6KF0SZuuB0yuiIuLJScuYo.png",
     name: "Radion Y-01",
     price: 199,
     status: "in-stock" as const,
   },
   {
     id: "5",
-    image: "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=400&h=400&fit=crop",
-    name: "Radio P52",
+    image: "https://framerusercontent.com/images/iqlO85MtzwaDJDynNJM1ZwWvNys.png",
+    name: "Proto T 52",
+    price: 99,
+    status: "out-of-stock" as const,
+  },
+  {
+    id: "6",
+    image: "https://framerusercontent.com/images/Bh5yiJhSRHnGMNKs3ITKN7R1rq4.png",
+    name: "Radiot P52",
     price: 299,
     status: "in-stock" as const,
   },
-];
-
-const newArrivals = [
-  {
-    id: "6",
-    image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=400&fit=crop",
-    name: "Pocket Play X-RP",
-    price: 249,
-    status: "new" as const,
-  },
   {
     id: "7",
-    image: "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=400&h=400&fit=crop",
-    name: "NeoChronos Console",
-    price: 199,
-    status: "new" as const,
+    image: "https://framerusercontent.com/images/UzlqqmSBYDe3mG46DVCNbucgg.png",
+    name: "AX-34 Deck",
+    price: 159,
+    status: "in-stock" as const,
   },
   {
     id: "8",
-    image: "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=400&h=400&fit=crop",
-    name: "SonicWave X1",
-    price: 349,
-    status: "new" as const,
+    image: "https://framerusercontent.com/images/amf7AUxXbx8JQqjTSxSa86sHI1Q.png",
+    name: "Pocket Play X-RP",
+    price: 279,
+    status: "in-stock" as const,
   },
   {
     id: "9",
-    image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=400&fit=crop",
-    name: "Recordio ZT 1",
-    price: 279,
-    status: "new" as const,
-  },
-  {
-    id: "10",
-    image: "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=400&h=400&fit=crop",
-    name: "Penurbia 24-14",
-    price: 189,
-    status: "new" as const,
-  },
-];
-
-const brands = [
-  {
-    id: "1",
-    name: "Teenage Engineering",
-    logo: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=100&h=100&fit=crop",
-    productCount: 12,
-  },
-  {
-    id: "2",
-    name: "Braun",
-    logo: "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=100&h=100&fit=crop",
-    productCount: 18,
-  },
-  {
-    id: "3",
-    name: "Sony",
-    logo: "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=100&h=100&fit=crop",
-    productCount: 24,
-  },
-  {
-    id: "4",
-    name: "Panasonic",
-    logo: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=100&h=100&fit=crop",
-    productCount: 16,
-  },
-  {
-    id: "5",
-    name: "Bang & Olufsen",
-    logo: "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=100&h=100&fit=crop",
-    productCount: 10,
-  },
-  {
-    id: "6",
-    name: "Yamaha",
-    logo: "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=100&h=100&fit=crop",
-    productCount: 14,
-  },
-];
-
-const staffMembers = [
-  {
-    id: "1",
-    name: "Alex",
-    role: "Audio Expert",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop",
-  },
-  {
-    id: "2",
-    name: "Maya",
-    role: "Tech Specialist",
-    avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop",
-  },
-  {
-    id: "3",
-    name: "Chris",
-    role: "Product Curator",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop",
-  },
-  {
-    id: "4",
-    name: "Jess",
-    role: "Build Advisor",
-    avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop",
-  },
-  {
-    id: "5",
-    name: "Sam",
-    role: "Audio Expert",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop",
-  },
-];
-
-const staffPickProducts = [
-  {
-    id: "11",
-    image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=400&fit=crop",
+    image: "https://framerusercontent.com/images/sf2RXVteaVIKZ4CMMDuy5OxJgFw.png",
     name: "SP-4 Radio",
     price: 149,
     status: "in-stock" as const,
-    staffMemberId: "1",
   },
   {
-    id: "12",
-    image: "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=400&h=400&fit=crop",
-    name: "AX-34 Dock",
-    price: 169,
-    status: "in-stock" as const,
-    staffMemberId: "2",
+    id: "10",
+    image: "https://framerusercontent.com/images/9IuqsvqmUCrbEJwmzoNFxDgt5U.png",
+    name: "SonicWave X1",
+    price: 199,
+    status: "out-of-stock" as const,
   },
   {
-    id: "13",
-    image: "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=400&h=400&fit=crop",
-    name: "Proto T-52",
-    price: 99,
-    status: "in-stock" as const,
-    staffMemberId: "3",
-  },
-  {
-    id: "14",
-    image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=400&fit=crop",
-    name: "Gamebeat OMR",
-    price: 189,
-    status: "in-stock" as const,
-    staffMemberId: "4",
-  },
-  {
-    id: "15",
-    image: "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=400&h=400&fit=crop",
-    name: "Headset z28",
-    price: 189,
-    status: "in-stock" as const,
-    staffMemberId: "5",
-  },
-];
-
-const underFiftyProducts = [
-  {
-    id: "16",
-    image: "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=400&h=400&fit=crop",
+    id: "11",
+    image: "https://framerusercontent.com/images/NjETYEJv2gTFoNCccRUMElCkPg.png",
     name: "Calc 9000",
     price: 79,
     status: "in-stock" as const,
   },
   {
-    id: "17",
-    image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=400&fit=crop",
-    name: "SonicWave X1",
-    price: 149,
-    status: "in-stock" as const,
+    id: "12",
+    image: "https://framerusercontent.com/images/FVlTCVAMDL4uYxEnpzFQyoZrNZo.png",
+    name: "NeoChrono Console",
+    price: 399,
+    status: "out-of-stock" as const,
   },
   {
-    id: "18",
-    image: "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=400&h=400&fit=crop",
-    name: "SP-4 Radio",
-    price: 149,
-    status: "in-stock" as const,
-  },
-  {
-    id: "19",
-    image: "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=400&h=400&fit=crop",
+    id: "13",
+    image: "https://framerusercontent.com/images/0s6mPyGAVm85FLM7Z7vvtGQYEZ4.png",
     name: "Recordio ZT 1",
     price: 99,
     status: "in-stock" as const,
   },
   {
-    id: "20",
-    image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=400&fit=crop",
-    name: "Radion T28",
-    price: 129,
+    id: "14",
+    image: "https://framerusercontent.com/images/7gTyrPv3vkoowZ8uAS0PhZ7qfR8.png",
+    name: "Gamebrot 0XR",
+    price: 189,
+    status: "out-of-stock" as const,
+  },
+  {
+    id: "15",
+    image: "https://framerusercontent.com/images/Q3GZoob7o00Ph3EvrwhWAqbfPI.png",
+    name: "Headset x28",
+    price: 189,
     status: "in-stock" as const,
   },
+  {
+    id: "16",
+    image: "https://framerusercontent.com/images/jj10qxfx4o42XIpRi5mhD0G02M.png",
+    name: "Peeuriva 24-T4",
+    price: 189,
+    status: "out-of-stock" as const,
+  },
 ];
-
-const heroImage = "https://d2xsxph8kpxj0f.cloudfront.net/310519663034607010/GBWXKzp7YHz5KEoCdna3x8/hero-woman-tablet-dGi393Re8qcyHqNc7j4GGf.webp";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
       <main>
-        <HeroSection heroImage={heroImage} />
-        <FeaturesSection />
-        <ProductCarousel title="Trending" products={trendingProducts} />
-        <ProductCarousel title="New Arrivals" products={newArrivals} />
-        <BrandShowcase title="Shop by Maker" brands={brands} />
-        <StaffPicks staffMembers={staffMembers} products={staffPickProducts} />
-        <ProductCarousel title="Under $150" products={underFiftyProducts} />
-        <Footer />
+        {/* Products Grid - Masonry Layout */}
+        <section className="py-8 md:py-12 bg-white">
+          <div className="container">
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-5 auto-rows-max">
+              {allProducts.map((product, idx) => {
+                // Create staggered masonry effect
+                let spanClass = "";
+                if (idx === 0) spanClass = "md:col-span-2 md:row-span-2"; // Large featured item
+                else if (idx === 7) spanClass = "md:col-span-2"; // Wide item
+                else if (idx === 15) spanClass = "md:col-span-2"; // Another wide item
+                
+                return (
+                  <div key={product.id} className={spanClass}>
+                    <ProductCard
+                      {...product}
+                      onAddToCart={() =>
+                        console.log(`Added ${product.name} to cart`)
+                      }
+                    />
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
       </main>
+      <Footer />
     </div>
   );
 }
