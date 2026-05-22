@@ -45,23 +45,23 @@ export function ProductCard({
       </div>
 
       {/* Content */}
-      <div className="flex-1 p-3 md:p-4 flex flex-col">
+      <div className="flex-1 p-2 md:p-3 flex flex-col">
         {/* Status Badge */}
-        <div className="mb-3">
+        <div className="mb-2">
           <span className={`status-badge ${config.className} text-xs`} style={{backgroundColor: '#ffffff', color: '#4a4a4a'}}>
             {config.label}
           </span>
         </div>
 
         {/* Price */}
-        <div className="mb-2">
-          <span className="text-base md:text-lg font-semibold text-foreground">
+        <div className="mb-1">
+          <span className="text-sm md:text-base font-semibold text-foreground">
             ${price.toFixed(0)}
           </span>
         </div>
 
         {/* Product Name */}
-        <h3 className="text-xs md:text-sm font-medium text-foreground line-clamp-2">
+        <h3 className="text-xs font-medium text-foreground line-clamp-2">
           {name}
         </h3>
       </div>
