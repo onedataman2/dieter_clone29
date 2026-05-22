@@ -45,17 +45,17 @@ export function ProductCard({
       </div>
 
       {/* Content */}
-      <div className="flex-1 p-1.5 md:p-2 flex flex-col">
+      <div className="flex-1 p-1 flex flex-col">
         {/* Status Badge */}
-        <div className="mb-1">
-          <span className={`status-badge ${config.className} text-xs px-2 py-0.5`} style={{backgroundColor: '#ffffff', color: '#4a4a4a'}}>
+        <div className="mb-0.5">
+          <span className={`status-badge ${config.className} text-xs px-1.5 py-0.5`} style={{backgroundColor: '#ffffff', color: '#4a4a4a'}}>
             {config.label}
           </span>
         </div>
 
         {/* Price */}
         <div className="mb-0.5">
-          <span className="text-xs md:text-sm font-semibold text-foreground">
+          <span className="text-xs font-semibold text-foreground">
             ${price.toFixed(0)}
           </span>
         </div>

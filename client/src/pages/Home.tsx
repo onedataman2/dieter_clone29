@@ -146,11 +146,11 @@ function ProductSection({
           )}
         </div>
         <div className="overflow-x-auto -mx-4 md:mx-0">
-          <div className="flex gap-2 md:gap-3 px-4 md:px-0 pb-2">
+          <div className="flex gap-1.5 md:gap-2 px-4 md:px-0 pb-2">
             {products.map((product) => (
               <div
                 key={product.id}
-                className="flex-shrink-0 w-32 md:w-40"
+                className="flex-shrink-0 w-28 md:w-32"
               >
                 <ProductCard {...product} />
               </div>
@@ -179,7 +179,7 @@ export default function Home() {
             <h2 className="text-lg md:text-xl font-semibold text-foreground mb-4">
               All Products
             </h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-2 md:gap-3 auto-rows-max">
+            <div className="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-6 gap-1.5 md:gap-2 auto-rows-max">
               {allProducts.map((product, idx) => {
                 // Create staggered masonry effect
                 let spanClass = "";
