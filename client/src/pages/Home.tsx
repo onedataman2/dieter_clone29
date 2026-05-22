@@ -126,7 +126,7 @@ export default function Home() {
         {/* Products Grid - Masonry Layout */}
         <section className="py-8 md:py-12 bg-white">
           <div className="container">
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-3 md:gap-4 auto-rows-max">
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-2 md:gap-3 auto-rows-max">
               {allProducts.map((product, idx) => {
                 // Create staggered masonry effect
                 let spanClass = "";
