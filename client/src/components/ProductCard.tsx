@@ -48,7 +48,7 @@ export function ProductCard({
       <div className="flex-1 p-3 md:p-4 flex flex-col">
         {/* Status Badge */}
         <div className="mb-3">
-          <span className={`status-badge ${config.className} text-xs`}>
+          <span className={`status-badge ${config.className} text-xs`} style={{backgroundColor: '#ffffff', color: '#4a4a4a'}}>
             {config.label}
           </span>
         </div>
