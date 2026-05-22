@@ -55,13 +55,13 @@ export function ProductCard({
 
         {/* Price */}
         <div className="mb-2">
-          <span className="text-base md:text-lg font-black text-foreground">
+          <span className="text-base md:text-lg font-semibold text-foreground">
             ${price.toFixed(0)}
           </span>
         </div>
 
         {/* Product Name */}
-        <h3 className="text-xs md:text-sm font-bold text-foreground line-clamp-2">
+        <h3 className="text-xs md:text-sm font-medium text-foreground line-clamp-2">
           {name}
         </h3>
       </div>

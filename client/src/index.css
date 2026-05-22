@@ -142,7 +142,7 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -160,13 +160,13 @@
   
   /* Typography hierarchy */
   h1 {
-    @apply text-5xl font-bold tracking-tight;
+    @apply text-5xl font-semibold tracking-tight;
   }
   h2 {
-    @apply text-3xl font-bold tracking-tight;
+    @apply text-3xl font-semibold tracking-tight;
   }
   h3 {
-    @apply text-xl font-semibold;
+    @apply text-xl font-medium;
   }
 }
 
@@ -209,7 +209,7 @@
   }
   
   .status-badge {
-    @apply inline-flex items-center gap-1 text-xs font-bold rounded-full px-3 py-1;
+    @apply inline-flex items-center gap-1 text-xs font-semibold rounded-full px-3 py-1;
   }
   
   .status-badge-in-stock {
@@ -225,7 +225,7 @@
   }
   
   .category-badge {
-    @apply inline-flex items-center justify-center w-8 h-8 rounded-full bg-primary text-black font-bold text-xs;
+    @apply inline-flex items-center justify-center w-8 h-8 rounded-full bg-primary text-black font-semibold text-xs;
   }
   
   .masonry-grid {

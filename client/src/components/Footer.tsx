@@ -8,7 +8,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <h3 className="text-lg font-black text-foreground mb-2">dieter</h3>
+            <h3 className="text-lg font-semibold text-foreground mb-2">dieter</h3>
             <p className="text-sm text-muted-foreground">
               ©2023 dieter
             </p>
@@ -16,7 +16,7 @@ export function Footer() {
 
           {/* Links */}
           <div>
-            <h4 className="text-sm font-bold text-foreground mb-4">Support</h4>
+            <h4 className="text-sm font-semibold text-foreground mb-4">Support</h4>
             <ul className="space-y-2">
               <li>
                 <a
@@ -47,7 +47,7 @@ export function Footer() {
 
           {/* Legal */}
           <div>
-            <h4 className="text-sm font-bold text-foreground mb-4">Legal</h4>
+            <h4 className="text-sm font-semibold text-foreground mb-4">Legal</h4>
             <ul className="space-y-2">
               <li>
                 <a
@@ -62,7 +62,7 @@ export function Footer() {
 
           {/* Social */}
           <div>
-            <h4 className="text-sm font-bold text-foreground mb-4">Follow</h4>
+            <h4 className="text-sm font-semibold text-foreground mb-4">Follow</h4>
             <div className="flex gap-4">
               <a
                 href="#"

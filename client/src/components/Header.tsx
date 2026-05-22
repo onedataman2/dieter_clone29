@@ -28,7 +28,7 @@ export function Header({ categories = [] }: HeaderProps) {
         <div className="flex items-center justify-between h-16">
           {/* Left: Logo */}
           <div className="flex-shrink-0">
-            <a href="/" className="text-2xl font-black text-foreground">
+            <a href="/" className="text-2xl font-semibold text-foreground">
               dieter
             </a>
           </div>
@@ -37,25 +37,25 @@ export function Header({ categories = [] }: HeaderProps) {
           <nav className="hidden md:flex items-center gap-6">
             <a
               href="#"
-              className="text-sm font-semibold text-foreground hover:text-primary transition-colors"
+              className="text-sm font-medium text-foreground hover:text-primary transition-colors"
             >
               Products
             </a>
             <a
               href="#"
-              className="text-sm font-semibold text-foreground hover:text-primary transition-colors"
+              className="text-sm font-medium text-foreground hover:text-primary transition-colors"
             >
               About
             </a>
             <a
               href="#"
-              className="text-sm font-semibold text-foreground hover:text-primary transition-colors"
+              className="text-sm font-medium text-foreground hover:text-primary transition-colors"
             >
               FAQ
             </a>
             <a
               href="#"
-              className="text-sm font-semibold text-foreground hover:text-primary transition-colors"
+              className="text-sm font-medium text-foreground hover:text-primary transition-colors"
             >
               Contact
             </a>
@@ -65,7 +65,7 @@ export function Header({ categories = [] }: HeaderProps) {
           <div className="flex items-center gap-4">
             <a
               href="#"
-              className="hidden sm:inline-block px-4 py-2 bg-primary text-black font-bold text-sm rounded-full hover:bg-opacity-90 transition-all"
+              className="hidden sm:inline-block px-4 py-2 bg-primary text-black font-semibold text-sm rounded-full hover:bg-opacity-90 transition-all"
             >
               Buy for 59€
             </a>
@@ -91,7 +91,7 @@ export function Header({ categories = [] }: HeaderProps) {
             {cats.map((cat, idx) => (
               <button
                 key={cat}
-                className={`flex-shrink-0 px-4 py-2 rounded-full font-bold text-sm transition-all ${
+                className={`flex-shrink-0 px-4 py-2 rounded-full font-semibold text-sm transition-all ${
                   idx === 0
                     ? "bg-primary text-black"
                     : "bg-muted text-foreground hover:bg-primary hover:text-black"
@@ -108,25 +108,25 @@ export function Header({ categories = [] }: HeaderProps) {
           <nav className="md:hidden pb-4 border-t border-border">
             <a
               href="#"
-              className="block py-2 text-sm font-semibold text-foreground hover:text-primary transition-colors"
+              className="block py-2 text-sm font-medium text-foreground hover:text-primary transition-colors"
             >
               Products
             </a>
             <a
               href="#"
-              className="block py-2 text-sm font-semibold text-foreground hover:text-primary transition-colors"
+              className="block py-2 text-sm font-medium text-foreground hover:text-primary transition-colors"
             >
               About
             </a>
             <a
               href="#"
-              className="block py-2 text-sm font-semibold text-foreground hover:text-primary transition-colors"
+              className="block py-2 text-sm font-medium text-foreground hover:text-primary transition-colors"
             >
               FAQ
             </a>
             <a
               href="#"
-              className="block py-2 text-sm font-semibold text-foreground hover:text-primary transition-colors"
+              className="block py-2 text-sm font-medium text-foreground hover:text-primary transition-colors"
             >
               Contact
             </a>
