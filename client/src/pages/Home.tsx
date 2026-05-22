@@ -1,8 +1,9 @@
 import { Header } from "@/components/Header";
 import { ProductCard } from "@/components/ProductCard";
 import { Footer } from "@/components/Footer";
+import { ChevronRight } from "lucide-react";
 
-// Mock product data matching the Framer design
+// Mock product data
 const allProducts = [
   {
     id: "1",
@@ -118,14 +119,66 @@ const allProducts = [
   },
 ];
 
+// Section component for horizontal scrolling
+function ProductSection({
+  title,
+  products,
+  showViewAll = true,
+}: {
+  title: string;
+  products: typeof allProducts;
+  showViewAll?: boolean;
+}) {
+  return (
+    <section className="py-6 md:py-8 bg-white border-b border-gray-200">
+      <div className="container">
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="text-lg md:text-xl font-semibold text-foreground">
+            {title}
+          </h2>
+          {showViewAll && (
+            <a
+              href="#"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1"
+            >
+              View all <ChevronRight className="w-4 h-4" />
+            </a>
+          )}
+        </div>
+        <div className="overflow-x-auto -mx-4 md:mx-0">
+          <div className="flex gap-2 md:gap-3 px-4 md:px-0 pb-2">
+            {products.map((product) => (
+              <div
+                key={product.id}
+                className="flex-shrink-0 w-32 md:w-40"
+              >
+                <ProductCard {...product} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function Home() {
+  // Organize products into different sections
+  const trendingProducts = allProducts.slice(0, 6);
+  const newProducts = allProducts.slice(2, 8);
+  const dealsProducts = allProducts.filter((p) => p.price < 200).slice(0, 6);
+  const staffPicksProducts = allProducts.slice(4, 10);
+
   return (
     <div className="min-h-screen bg-white">
       <Header />
       <main>
-        {/* Products Grid - Masonry Layout */}
-        <section className="py-8 md:py-12 bg-white">
+        {/* Main Grid - All Products */}
+        <section className="py-8 md:py-12 bg-white border-b border-gray-200">
           <div className="container">
+            <h2 className="text-lg md:text-xl font-semibold text-foreground mb-4">
+              All Products
+            </h2>
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-2 md:gap-3 auto-rows-max">
               {allProducts.map((product, idx) => {
                 // Create staggered masonry effect
@@ -133,7 +186,7 @@ export default function Home() {
                 if (idx === 0) spanClass = "md:col-span-2 md:row-span-2"; // Large featured item
                 else if (idx === 7) spanClass = "md:col-span-2"; // Wide item
                 else if (idx === 15) spanClass = "md:col-span-2"; // Another wide item
-                
+
                 return (
                   <div key={product.id} className={spanClass}>
                     <ProductCard
@@ -148,6 +201,18 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* Trending Section */}
+        <ProductSection title="Trending" products={trendingProducts} />
+
+        {/* New Arrivals Section */}
+        <ProductSection title="New Arrivals" products={newProducts} />
+
+        {/* Deals Section */}
+        <ProductSection title="Deals Under $200" products={dealsProducts} />
+
+        {/* Staff Picks Section */}
+        <ProductSection title="Staff Picks" products={staffPicksProducts} />
       </main>
       <Footer />
     </div>
