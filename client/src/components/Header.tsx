@@ -36,10 +36,16 @@ export function Header({ categories = [] }: HeaderProps) {
           {/* Center: Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-6">
             <a
-              href="#"
+              href="/products"
               className="text-sm font-medium text-foreground hover:text-primary transition-colors"
             >
               Products
+            </a>
+            <a
+              href="/builder"
+              className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+            >
+              Builder
             </a>
             <a
               href="#"
@@ -107,10 +113,16 @@ export function Header({ categories = [] }: HeaderProps) {
         {mobileMenuOpen && (
           <nav className="md:hidden pb-4 border-t border-border">
             <a
-              href="#"
+              href="/products"
               className="block py-2 text-sm font-medium text-foreground hover:text-primary transition-colors"
             >
               Products
+            </a>
+            <a
+              href="/builder"
+              className="block py-2 text-sm font-medium text-foreground hover:text-primary transition-colors"
+            >
+              Builder
             </a>
             <a
               href="#"
