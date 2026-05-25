@@ -183,7 +183,7 @@ export default function Home() {
               {allProducts.map((product, idx) => {
                 // Create staggered masonry effect
                 let spanClass = "";
-                if (idx === 0) spanClass = "md:col-span-2 md:row-span-2"; // Large featured item
+                if (idx === 0) spanClass = "md:col-span-2"; // Large featured item
                 else if (idx === 7) spanClass = "md:col-span-2"; // Wide item
                 else if (idx === 15) spanClass = "md:col-span-2"; // Another wide item
 
